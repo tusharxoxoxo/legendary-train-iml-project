@@ -85,52 +85,81 @@ print("Accuracy:", accuracy)
 
 Methods
 NeuralNetwork class
-__init__(self, numInput, numHidden, numOutput, seed)
+init(self, numInput, numHidden, numOutput, seed)
 Initializes the neural network with the specified number of input, hidden, and output nodes.
 
+Parameters:
+
 numInput: Number of input nodes.
-
 numHidden: Number of hidden nodes.
-
 numOutput: Number of output nodes.
-
 seed: Random seed for weight initialization.
-
+python
+Copy code
+def init(self, numInput, numHidden, numOutput, seed):
+    # Implementation code here
 setWeights(self, weights)
 Sets the weights of the neural network.
 
-weights: List or array of weights.
+Parameters:
 
+weights: List or array of weights.
+python
+Copy code
+def setWeights(self, weights):
+    # Implementation code here
 getWeights(self)
 Returns the weights of the neural network as a NumPy array.
 
+python
+Copy code
+def getWeights(self):
+    # Implementation code here
 initializeWeights(self)
 Initializes the weights of the neural network with random values.
 
+python
+Copy code
+def initializeWeights(self):
+    # Implementation code here
 computeOutputs(self, xValues)
 Computes the outputs of the neural network for the given input values.
 
+Parameters:
+
 xValues: Input values as a list or array.
+Returns:
+The computed outputs as a NumPy array.
 
-Returns the computed outputs as a NumPy array.
-
+python
+Copy code
+def computeOutputs(self, xValues):
+    # Implementation code here
 train(self, trainData, maxEpochs, learnRate, L1=False, lamda=0.0)
 Trains the neural network using the provided training data.
 
+Parameters:
+
 trainData: Training data as a NumPy array.
-
 maxEpochs: Maximum number of training epochs.
-
 learnRate: Learning rate for weight updates.
-
 L1: Boolean value indicating whether to use L1 regularization (default: False).
-
 lamda: L1 regularization parameter (default: 0.0).
+Returns:
+The trained weights as a NumPy array.
 
-Returns the trained weights as a NumPy array.
-
+python
+Copy code
+def train(self, trainData, maxEpochs, learnRate, L1=False, lamda=0.0):
+    # Implementation code here
 accuracy(self, tdata)
 Computes the accuracy of the neural network on the given data.
 
-tdata: Test or train data as a NumPy array.
+Parameters:
 
+tdata: Test or train data as a NumPy array.
+python
+Copy code
+def accuracy(self, tdata):
+    # Implementation code here
+Please note that the code snippets are provided within fenced code blocks with the language specified as python to enable syntax highlighting for Python code.
