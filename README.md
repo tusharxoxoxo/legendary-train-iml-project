@@ -16,57 +16,69 @@ To use the nn_L1_alt.py module, follow these steps:
 Import the required libraries:
 python
 
-'''
+<pre>
+```python
 import numpy as np
 import random
 import math
-'''
+```
+</pre>
 
 Import the nn_L1_alt.py module:
 
-'''
+<pre>
+```python
 from nn_L1_alt import NeuralNetwork, makeData, showVector, showMatrixPartial
-'''
+```
+</pre>
 
 Create an instance of the NeuralNetwork class:
 
-'''
+<pre>
+```python
 numInput = 2  # number of input nodes
 numHidden = 4  # number of hidden nodes
 numOutput = 3  # number of output nodes
 seed = 0  # random seed for weight initialization
 nn = NeuralNetwork(numInput, numHidden, numOutput, seed)
-'''
+```
+</pre>
 
 Train the neural network using training data:
 
-'''
+<pre>
+```python
 # Generate training data
 numRows = 1000  # number of training samples
 inputsSeed = 0  # random seed for input generation
 trainData = makeData(nn, numRows, inputsSeed)
-'''
+```
+</pre>
 
 # Train the neural network
 
-'''
+<pre>
+```python
 maxEpochs = 1000  # maximum number of training epochs
 learnRate = 0.01  # learning rate
 L1 = True  # enable L1 regularization
 lamda = 0.01  # L1 regularization parameter
 nn.train(trainData, maxEpochs, learnRate, L1, lamda)
-'''
+```
+</pre>
 
 Evaluate the accuracy of the trained neural network on test data:
 
-'''
+<pre>
+```python
 # Generate test data
 testData = makeData(nn, numRows, inputsSeed)
 
 # Evaluate accuracy
 accuracy = nn.accuracy(testData)
 print("Accuracy:", accuracy)
-'''
+```
+</pre>
 
 Methods
 NeuralNetwork class
